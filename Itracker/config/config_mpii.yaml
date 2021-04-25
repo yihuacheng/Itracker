@@ -1,0 +1,28 @@
+---
+train:
+  params:
+    batch_size: 256
+    epoch: 30
+    lr: 0.001
+    decay: 0.1
+    decay_step: 1000
+    loss: MSELoss
+  save:
+    save_path: "/home/cyh/GazeBenchmark/exp/Implementation/Itracker/mpii"
+    model_name: Itracker
+    step: 5
+  data:
+    image: "/home/cyh/GazeDataset20200519/GazePoint/MPIIGaze/Image"
+    label: "/home/cyh/GazeDataset20200519/GazePoint/MPIIGaze/Label"
+  pretrains: "None"
+test:
+   load:
+      begin_step: 5
+      end_step: 30
+      steps: 5
+      load_path: "/home/cyh/GazeBenchmark/exp/Implementation/Itracker/mpii"
+      model_name: Itracker
+   data:
+      image: "/home/cyh/GazeDataset20200519/GazePoint/MPIIGaze/Image"
+      label: "/home/cyh/GazeDataset20200519/GazePoint/MPIIGaze/Label"
+reader: reader_mpii
