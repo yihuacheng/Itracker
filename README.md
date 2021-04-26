@@ -1,14 +1,18 @@
 # Itracker
 The Pytorch Implementation of "Eye Tracking for Everyone". (updated in 2021/04/25)
 
-This is the implementated version in our survey **"Appearance-based Gaze Estimation With Deep Learning: A Review and Benchmark"**.
-Please refer our paper or visit our benchmark website <a href="http://phi-ai.org/project/Gazehub/" target="_blank">*GazeHub*</a> for more information.
-The performance of this version is reported in them.
+This is the implemented version metioned in our survey **"Appearance-based Gaze Estimation With Deep Learning: A Review and Benchmark"**.
+Please refer our paper or visit our benchmark website <a href="http://phi-ai.org/GazeHub/" target="_blank">*GazeHub*</a> for more information.
+The performance of this version is reported in the website.
 
 To know more detail about the method, please refer the origin paper.
 
-We recommend you to use the data processing code provided in <a href="http://phi-ai.org/project/Gazehub/" target="_blank">*GazeHub*</a>.
+We recommend you to use the data processing code provided in <a href="http://phi-ai.org/GazeHub/" target="_blank">*GazeHub*</a>.
 You can use the processed dataset and this code for directly running.
+
+## License
+The code is under the license of [CC BY-NC-SA 4.0 license](https://creativecommons.org/licenses/by-nc-sa/4.0/).
+
 
 ## Introduction
 Gazecapture dataset provides training, test and validation set.
@@ -42,7 +46,7 @@ For test, you should change
  
 ### Training
 
-In the cross validation mode, you can run
+In the cross-validation mode, you can run
 ```
 python leave_train.py config/config_mpii.yaml 0
 ```
@@ -61,7 +65,7 @@ python train.py config/config_gazecapture.yaml
 ```
 
 ### Testing
-In the cross validation mode, you can run
+In the cross-validation mode, you can run
 ```
 python leave_test.py config/config_mpii.yaml 0
 ```
@@ -76,10 +80,11 @@ python test.py config/config_gazecapture.yaml
 ```
 
 ### Result
-After training or test, you can find the result from the `save_path` in `config_mpii.yaml`. 
+After training or test, you can find the result from the `save_path` in the config file. 
 
 
 ## Citation
+If you use our code, please cite:
 ```
 @InProceedings{Krafka_2016_CVPR,
 	author = {Krafka, Kyle and Khosla, Aditya and Kellnhofer, Petr and Kannan, Harini and Bhandarkar, Suchendra and Matusik, Wojciech and Torralba, Antonio},
