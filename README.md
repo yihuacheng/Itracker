@@ -79,7 +79,7 @@ In the training-test mode, you can run
 python train.py config/config_gazecapture.yaml
 ```
 
-### Testing
+### Test
 In the cross-validation mode, you can run
 ```
 python leave_test.py config/config_mpii.yaml 0
